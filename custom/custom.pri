@@ -5,7 +5,7 @@ message("Adding Custom Plugin")
 
 CUSTOM_QGC_VER_MAJOR = 0
 CUSTOM_QGC_VER_MINOR = 0
-CUSTOM_QGC_VER_FIRST_BUILD = 0
+CUSTOM_QGC_VER_FIRST_BUILD = 1
 
 # Build number is automatic
 # Uses the current branch. This way it works on any branch including build-server's PR branches
@@ -35,18 +35,18 @@ CONFIG  += QGC_DISABLE_PX4_PLUGIN_FACTORY
 DEFINES += CUSTOMHEADER=\"\\\"CustomPlugin.h\\\"\"
 DEFINES += CUSTOMCLASS=CustomPlugin
 
-TARGET   = CustomQGroundControl
-DEFINES += QGC_APPLICATION_NAME='"\\\"Custom QGroundControl\\\""'
+TARGET   = SwiftLabMissionPlanner
+DEFINES += QGC_APPLICATION_NAME='"\\\"SwiftLab Planner\\\""'
 
 DEFINES += QGC_ORG_NAME=\"\\\"qgroundcontrol.org\\\"\"
 DEFINES += QGC_ORG_DOMAIN=\"\\\"org.qgroundcontrol\\\"\"
 
-QGC_APP_NAME        = "Custom QGroundControl"
-QGC_BINARY_NAME     = "CustomQGroundControl"
-QGC_ORG_NAME        = "Custom"
-QGC_ORG_DOMAIN      = "org.custom"
-QGC_APP_DESCRIPTION = "Custom QGroundControl"
-QGC_APP_COPYRIGHT   = "Copyright (C) 2020 QGroundControl Development Team. All rights reserved."
+QGC_APP_NAME        = "Swift Lab Mission"
+QGC_BINARY_NAME     = "SwiftLabMission"
+QGC_ORG_NAME        = "SwiftLab"
+QGC_ORG_DOMAIN      = "org.swiftlab"
+QGC_APP_DESCRIPTION = "SwiftLab Mission Planner"
+QGC_APP_COPYRIGHT   = "Copyright (C) 2020 Swift Lab Limited. All rights reserved."
 
 # Our own, custom resources
 RESOURCES += \
@@ -89,4 +89,3 @@ SOURCES += \
     $$PWD/src/AutoPilotPlugin/CustomAutoPilotPlugin.cc \
     $$PWD/src/FirmwarePlugin/CustomFirmwarePlugin.cc \
     $$PWD/src/FirmwarePlugin/CustomFirmwarePluginFactory.cc \
-
